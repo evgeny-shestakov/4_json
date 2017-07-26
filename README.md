@@ -14,10 +14,10 @@ def load_data(filepath):
 and
 
 """
-    Pretty Print string data.
+    Pretty Print string raw_json.
     print Pretty data 
 """
-def pretty_print_json(data):
+def pretty_print_json(raw_json):
 
 
 # Quickstart
