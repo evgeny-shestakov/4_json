@@ -3,7 +3,7 @@ import sys
 from pprint import pprint
 
 
-def load_data(filepath):
+def load_filedata(filepath):
     """
         Load json data from file to string.
         return as a string
@@ -26,7 +26,7 @@ def pretty_print_json(raw_json):
 if __name__ == '__main__':    
     try:
         json_path = sys.argv[1:2].pop()
-        raw_json = load_data(json_path)
+        raw_json = load_filedata(json_path)
         pretty_print_json(raw_json)
     except (IndexError, FileNotFoundError, json.decoder.JSONDecodeError):
         print('warning: please add valid json file as argument: ' + 

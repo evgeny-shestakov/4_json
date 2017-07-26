@@ -9,7 +9,7 @@ Module consists of:
     Load json data from file to string.
     return as a string
 """
-def load_data(filepath):
+def load_filedata(filepath):
 
 and
 
