@@ -1,34 +1,40 @@
 import json
 import sys
-from pprint import pprint
-
+import os.path
+  
 
 def load_filedata(filepath):
     """
         Load json data from file to string.
-        return as a string
+        return string
     """
-    with open(filepath) as file_handler:    
-        return json.load(file_handler)
+    if os.path.isfile(filepath):
+        with open(filepath, 'r') as file_handler:
+            try:
+                return json.load(file_handler)
+            except ValueError:
+                return None
 
 
 def pretty_print_json(raw_json):    
     """
-        Pretty Print string data.
-        print Pretty data 
+        Pretty Print string data. 
     """
     if raw_json is not None:
-        pprint(raw_json)
+        print(json.dumps(raw_json, ensure_ascii=False, 
+                        sort_keys=True, indent=4))
     else:
-        print('raw_json is empty!')
+        print('no json data!')
 
 
-if __name__ == '__main__':    
-    try:
-        json_path = sys.argv[1:2].pop()
-        raw_json = load_filedata(json_path)
-        pretty_print_json(raw_json)
-    except (IndexError, FileNotFoundError, json.decoder.JSONDecodeError):
+if __name__ == '__main__':
+    raw_json = None 
+    
+    try: 
+        raw_json = load_filedata(sys.argv[1])
+    except IndexError:
         print('warning: please add valid json file as argument: ' + 
             'python pprint_json.py data.json')
+            
+    pretty_print_json(raw_json)        
     
