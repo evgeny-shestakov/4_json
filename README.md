@@ -6,16 +6,15 @@ Uses: json, sys, os.path
 Module consists of 2 functions:
 
 
-load_filedata(filepath):
+- load_filedata(filepath):
 
-- Load json data from file to string.
-
-and
+Load json data from file to string.
 
 
-pretty_print_json(raw_json):
 
-- Pretty Print string raw_json.
+- pretty_print_json(raw_json):
+
+Pretty Print string raw_json.
 
 
 # Quickstart
