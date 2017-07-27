@@ -1,29 +1,29 @@
 # Prettify JSON
 
-Uses: pprint, sys, json modules
+Uses: json, sys, os.path
 
 
-Module consists of:
+Module consists of 2 functions:
 
-"""
-    Load json data from file to string.
-    return as a string
-"""
-def load_filedata(filepath):
+
+load_filedata(filepath):
+
+- Load json data from file to string.
 
 and
 
-"""
-    Pretty Print string raw_json.
-    print Pretty data 
-"""
-def pretty_print_json(raw_json):
+
+pretty_print_json(raw_json):
+
+- Pretty Print string raw_json.
 
 
 # Quickstart
 
 please add valid json file as argument
- 
+
+get some json data file and feed it as a param!
+
 python pprint_json.py data.json
 
 Example of script launch on Linux, Python 3.5:
@@ -31,20 +31,24 @@ Example of script launch on Linux, Python 3.5:
 ```#!bash
 
 $ python pprint_json.py <path to file>
+[                                                                                                                                                                                                                   
+    {                                                                                                                                                                                                               
+        "Cells": {                                                                                                                                                                                                  
+            "Address": "улица Академика Павлова, дом 10",                                                                                                                                                           
+            "AdmArea": "Западный административный округ",                                                                                                                                                           
+            "ClarificationOfWorkingHours": null,                                                                                                                                                                    
+            "District": "район Кунцево",                                                                                                                                                                            
+            "IsNetObject": "да",                                                                                                                                                                                    
+            "Name": "Ароматный Мир",                                                                                                                                                                                
+            "OperatingCompany": "Ароматный Мир",                                                                                                                                                                    
+            "PublicPhone": [                                                                                                                                                                                        
+                {                                                                                                                                                                                                   
+                    "PublicPhone": "(495) 777-51-95"                                                                                                                                                                
+                }                                                                                                                                                                                                   
+            ],   
 
-[{'Cells': {'Address': 'улица Академика Павлова, дом 10',                                                                                                                                                           
-            'AdmArea': 'Западный административный округ',                                                                                                                                                           
-            'ClarificationOfWorkingHours': None,                                                                                                                                                                    
-            'District': 'район Кунцево',                                                                                                                                                                            
-            'IsNetObject': 'да',                                                                                                                                                                                    
-            'Name': 'Ароматный Мир',                                                                                                                                                                                
-            'OperatingCompany': 'Ароматный Мир',                                                                                                                                                                    
-            'PublicPhone': [{'PublicPhone': '(495) 777-51-95'}],                                                                                                                                                    
-            'TypeService': 'реализация продовольственных товаров',                                                                                                                                                  
-            'WorkingHours': [{'DayOfWeek': 'понедельник',                                                                                                                                                           
-                              'Hours': '09:30-22:30'},                                                                                                                                                              
-                             {'DayOfWeek': 'вторник', 'Hours': '09:30-22:30'},                                                                                                                                      
-                             {'DayOfWeek': 'среда', 'Hours': '09:30-22:30'}, DO add output example
+...
+
 
 ```
 
