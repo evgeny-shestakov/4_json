@@ -4,10 +4,6 @@ import os.path
   
 
 def load_filedata(filepath):
-    """
-        Load json data from file to string.
-        return string
-    """
     if os.path.isfile(filepath):
         with open(filepath, 'r') as file_handler:
             try:
@@ -17,9 +13,6 @@ def load_filedata(filepath):
 
 
 def pretty_print_json(raw_json):    
-    """
-        Pretty Print string data. 
-    """
     if raw_json is not None:
         print(json.dumps(raw_json, ensure_ascii=False, 
                         sort_keys=True, indent=4))
